@@ -1,0 +1,13 @@
+toc:
+  - name: Chrome API with Promises
+    file: intro.md
+  - browserAction
+  - contextMenu
+  - message
+  - notify
+  - pages
+  - proxy
+  - storageLocal
+  - storageSync
+  - tabs
+  - webRequest
