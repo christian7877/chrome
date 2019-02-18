@@ -85,7 +85,8 @@ export const create = details => {
  *
  * @memberof tabs
  * @function get
- * @param {number} [$0.tabId] - ID of the tab to get.
+ * @param {Object} [details] - The details of a tab.
+ * @param {number} [details.tabId] - ID of the tab to get.
  * @returns {Promise<Tab>} A Promise that will be fulfilled with a tabs.Tab object containing information about the tab.
  *
  * @example
@@ -173,8 +174,9 @@ export const query = query => {
  *
  * @memberof tabs
  * @function update
- * @param {number} [$0.tabId] - Defaults to the selected tab of the current window.
- * @param {Object} ...[$0.updateProps] - Specified properties of tabs. See [Chrome updateProperties](https://developer.chrome.com/extensions/tabs#property-update-updateProperties).
+ * @param {Object} [details] - The details of a tab.
+ * @param {number} [details.tabId] - Defaults to the selected tab of the current window.
+ * @param {Object} [details.updateProps] - Specified properties of tabs. See [Chrome updateProperties](https://developer.chrome.com/extensions/tabs#property-update-updateProperties).
  * @returns {Promise<Tab>} A Promise that will be fulfilled with a tabs.Tab object containing details about the updated tab.
  *
  * @example
@@ -216,7 +218,8 @@ export const update = ({ tabId, ...updateProps }) => {
  *
  * @memberof tabs
  * @function close
- * @param {string|Array<string>} $0.tabId - The tab ID or list of tab IDs to close.
+ * @param {Object} details - The details of a tab.
+ * @param {string|Array<string>} details.tabId - The tab ID or list of tab IDs to close.
  * @returns {Promise} Resolves on success or rejects on failure with the reason.
  *
  * @example
@@ -264,10 +267,11 @@ export const close = ({ tabId }) => {
  *
  * @memberof tabs
  * @function execute
- * @param {number} [$0.tabId] - The id of the tab to inject. Defaults to the active tab.
- * @param {string} [$0.code] - JavaScript or CSS code to inject.
- * @param {string} [$0.file] - The path to the JavaScript or CSS file to inject.
- * @param {string} ...[$0.details] - [Other optional details of the script to run.](https://developer.chrome.com/extensions/tabs#property-executeScript-details).
+ * @param {Object} [details] - The details of a tab.
+ * @param {number} [details.tabId] - The id of the tab to inject. Defaults to the active tab.
+ * @param {string} [details.code] - JavaScript or CSS code to inject.
+ * @param {string} [details.file] - The path to the JavaScript or CSS file to inject.
+ * @param {string} [details.details] - [Other optional details of the script to run.](https://developer.chrome.com/extensions/tabs#property-executeScript-details).
  * @returns {Promise<Array>} Resolves with an array of the results of the script in every injected frame.
  *
  * @example
