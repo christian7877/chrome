@@ -1,11 +1,11 @@
 {
   "name": "@bumble/chrome",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Make Chrome extensions easier with Promise based API options.",
   "main": "build/bundle-cjs.js",
   "module": "build/bundle-esm.js",
   "author": "<jacksteamdev@gmail.com>",
-  "repository": "bumble-ext/chrome",
+  "repository": "bumble-org/chrome",
   "keywords": [
     "chrome",
     "promises",
@@ -47,5 +47,8 @@
     "setupFilesAfterEnv": [
       "./tests/jest.setup.js"
     ]
-  }
+  },
+  "files": [
+    "/build"
+  ]
 }
