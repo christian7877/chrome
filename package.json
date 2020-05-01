@@ -39,10 +39,13 @@
     "start:rollup": "rollup -c -w",
     "test": "jest",
     "preversion": "npm run build",
-    "postversion": "git push && npm publish"
+    "postversion": "git push && npm publish",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "@bumble/stream": "^0.2.2"
+    "@bumble/stream": "^0.2.2",
+    "snyk": "^1.316.1"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -51,5 +54,6 @@
   },
   "files": [
     "/build"
-  ]
+  ],
+  "snyk": true
 }
